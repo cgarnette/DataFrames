@@ -1,6 +1,63 @@
 # DataFrames
 Practice assignments using Pandas in Python (Coursera, Intro to Data Science)
 
+Recession Housing
+  - Use Pandas to clean and analyze data related to GDP and Housing
+  - Find whether University towns or non-University towns were more heavily effected by the 2008 Recession in the United States. In terms of the housing market.
+  - Break down was as follows:
+  ``` 
+  * From the [Zillow research data site](http://www.zillow.com/research/data/) there is housing data for the United States. In particular the datafile for [all homes at a city level](http://files.zillowstatic.com/research/public/City/City_Zhvi_AllHomes.csv), "City_Zhvi_AllHomes.csv", has median home sale prices at a fine grained level.
+ * From the Wikipedia page on college towns is a list of [university towns in the United States](https://en.wikipedia.org/wiki/List_of_college_townsCollege_towns_in_the_United_States) which has been copy and pasted into the file "university_towns.txt".
+ * From Bureau of Economic Analysis, US Department of Commerce, the [GDP over time](http://www.bea.gov/national/index.htmgdp) of the United States in current dollars (use the chained value in 2009 dollars), in quarterly intervals, in the file "gdplev.xls". For this assignment, only look at GDP data from the first quarter of 2000 onward.
+ 
+ 
+get_list_of_university_towns :
+    Returns a DataFrame of towns and the states they are in from the 
+    university_towns.txt list. The format of the DataFrame should be:
+    DataFrame( [ ["Michigan", "Ann Arbor"], ["Michigan", "Yipsilanti"] ], 
+    columns=["State", "RegionName"]  )
+    
+    The following cleaning has been done:
+
+    1. For "State", removing characters from "[" to the end.
+    2. For "RegionName", when applicable, removing every character from " (" to the end.
+    3. Depending on how you read the data, you may need to remove newline character '\n'.
+	
+
+ get_recession_start :
+    Returns the year and quarter of the recession start time as a 
+    string value in a format such as 2005q3
+    
+ get_recession_end :
+    Returns the year and quarter of the recession end time as a 
+    string value in a format such as 2005q3
+    
+ get_recession_bottom :
+    Returns the year and quarter of the recession bottom time as a 
+    string value in a format such as 2005q3
+    
+ convert_housing_data_to_quarters :
+    Converts the housing data to quarters and returns it as mean 
+    values in a dataframe. This dataframe should be a dataframe with
+    columns for 2000q1 through 2016q3, and should have a multi-index
+    in the shape of ["State","RegionName"].
+
+ run_ttest :
+    First creates new data showing the decline or growth of housing prices
+    between the recession start and the recession bottom. Then runs a ttest
+    comparing the university town values to the non-university towns values, 
+    return whether the alternative hypothesis (that the two groups are the same)
+    is true or not as well as the p-value of the confidence. 
+    
+    Return the tuple (different, p, better) where different=True if the t-test is
+    True at a p<0.01 (we reject the null hypothesis), or different=False if 
+    otherwise (we cannot reject the null hypothesis). The variable p should
+    be equal to the exact p value returned from scipy.stats.ttest_ind(). The
+    value for better should be either "university town" or "non-university town"
+    depending on which has a lower mean price ratio (which is equivilent to a
+    reduced market loss).
+  ```
+  
 
 GDP and Energy
   - Use Pandas to clean and analyze data related to GDP and Global Energy consumption
