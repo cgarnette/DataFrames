@@ -5,7 +5,7 @@ Practice assignments using Pandas in Python (Coursera, Intro to Data Science)
 GDP and Energy
   - Use Pandas to clean and analyze data related to GDP and Global Energy consumption
   - Assignment breaks down as follows:
-  
+  ```
   - Question 1 
  Load the energy data from the file `Energy Indicators.xls`, which is a list of indicators of [energy supply and renewable electricity production](Energy%20Indicators.xls) from the [United Nations](http://unstats.un.org/unsd/environment/excel_file_tables/2013/Energy%20Indicators.xls) for the year 2013, and should be put into a DataFrame with the variable name of **energy**.
  
@@ -17,10 +17,10 @@ GDP and Energy
  
  Rename the following list of countries (for use in later questions):
  
- ```"Republic of Korea": "South Korea",
+ "Republic of Korea": "South Korea",
  "United States of America": "United States",
  "United Kingdom of Great Britain and Northern Ireland": "United Kingdom",
- "China, Hong Kong Special Administrative Region": "Hong Kong"```
+ "China, Hong Kong Special Administrative Region": "Hong Kong"
  
  There are also several countries with numbers and/or parenthesis in their name. Be sure to remove these, 
  
@@ -48,7 +48,7 @@ GDP and Energy
         'Citations per document', 'H index', 'Energy Supply',
         'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008',
         '2009', '2010', '2011', '2012', '2013', '2014', '2015'].
-   ```
+   
   -  Question 2
  The previous question joined three datasets then reduced this to just the top 15 entries. When you joined the datasets, but before you reduced this to the top 15 items, how many entries did you lose?
  
@@ -85,6 +85,6 @@ GDP and Energy
   - Question 13
  Convert the Population Estimate series to a string with thousands separator (using commas). Do not round the results.
  
- 
+ ```
  
  
