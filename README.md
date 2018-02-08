@@ -4,7 +4,7 @@ Practice assignments using Pandas in Python (Coursera, Intro to Data Science)
 Recession Housing
   - Use Pandas to clean and analyze data related to GDP and Housing
   - Find whether University towns or non-University towns were more heavily effected by the 2008 Recession in the United States. In terms of the housing market.
-  - Break down was as follows:
+  - Break down is as follows:
   ``` 
   * From the [Zillow research data site](http://www.zillow.com/research/data/) there is housing data for the United States. In particular the datafile for [all homes at a city level](http://files.zillowstatic.com/research/public/City/City_Zhvi_AllHomes.csv), "City_Zhvi_AllHomes.csv", has median home sale prices at a fine grained level.
  * From the Wikipedia page on college towns is a list of [university towns in the United States](https://en.wikipedia.org/wiki/List_of_college_townsCollege_towns_in_the_United_States) which has been copy and pasted into the file "university_towns.txt".
